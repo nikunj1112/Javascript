@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP TO PRINT GRADES OF STUDENT BASED ON THEIR PERCENTAGE
+
+        let Percentage = -1;
+        {
+            if (Percentage >= 90 && Percentage <= 100) {
+                grade = "A+"
+            } else if (Percentage >= 80 && Percentage < 90) {
+                grade = "A"
+            } else if (Percentage >= 70 && Percentage < 80) {
+                grade = "B"
+            }else if (Percentage >= 60 && Percentage < 70) {
+                grade = "C"
+            }else if (Percentage >= 50 && Percentage < 60) {
+                grade = "D"
+            }else if (Percentage >= 0 && Percentage < 50){
+                grade = "Fail"
+            }
+            else{
+                document.writeln("Invalid Percentage")
+            }
+            
+            document.writeln("Grade :" + " " + grade);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
