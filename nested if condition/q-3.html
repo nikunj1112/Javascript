@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        //wap to find max number from 3 user input variables.
+        let a = parseInt(prompt("Enter a:"));
+        let b = parseInt(prompt("Enter b:"));
+        let c = parseInt(prompt("Enter c:"));
+
+        //a,b,c
+        if (a > b) {
+            //a,c
+            if (a > c) {
+                //a
+                document.writeln("A is max");
+            }
+            else {
+                //c
+                document.writeln("C is max");
+            }
+        }
+        else {
+            //b,c
+            if (b > c) {
+                //b
+                document.writeln("B is max");
+            }
+            else {
+                //c
+                document.writeln("C is max");
+            }
+        }
+    </script>
+</body>
+
+</html>
