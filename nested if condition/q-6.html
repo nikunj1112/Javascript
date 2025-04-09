@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //wap to find min number from 4 user input variables.using ladder if else.
+
+        let a = parseInt(prompt("Enter a:"));
+        let b = parseInt(prompt("Enter b:"));
+        let c = parseInt(prompt("Enter c:"));
+        let d = parseInt(prompt("Enter d:"));
+
+        //a,b,c,d,
+        if (a <= b && a <= c && a <= d) {
+            //a
+            min = a;
+        } else if (b <= a && b <= c && b <= d) {
+            //b
+            min = b;
+        } else if (c <= a && c <= b && c <= d) {
+            //c
+            min = c;
+        }
+        else {
+            //d
+            min = d;
+        }
+
+        document.writeln("The minimum number is:" + min)
+
+    </script>
+
+</body>
+
+</html>

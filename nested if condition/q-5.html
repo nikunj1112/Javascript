@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //wap to find max number from 5 user input variables. using nested if else.
+
+        let a = parseInt(prompt("Enter a:"));
+        let b = parseInt(prompt("Enter b:"));
+        let c = parseInt(prompt("Enter c:"));
+        let d = parseInt(prompt("Enter d:"));
+        let e = parseInt(prompt("Enter e:"));
+
+        // a,b,c,d,e                              
+        if (a > b) {
+            //a,c,d,e 
+            if (a > c) {
+                //a,d,e
+                if (a > d) {
+                    //a,e
+                    if (a > e) {
+                        //a
+                        document.writeln("A is max")
+                    } else {
+                        //e
+                        document.writeln("E is max")
+                    }
+                } else {
+                    //d,e
+                    if (d > e) {
+                        //d
+                        document.writeln("D is max")
+                    } else {
+                        //e
+                        document.writeln("E is max")
+                    }
+                }
+            } else {
+                //c,d,e
+                if (c > d) {
+                    //c,e
+                    if (c > e) {
+                        //c
+                        document.writeln("C is max")
+                    } else {
+                        //e
+                        document.writeln("E is max")
+                    }
+                } else {
+                    //d,e
+                    if (d > e) {
+                        document.writeln("D is max")
+                    } else {
+                        //e
+                        document.writeln("E is max")
+                    }
+
+                }
+
+            }
+        } else {
+            //b,c,d,e
+            if (b > c) {
+                //b,d,e
+                if (b > d) {
+                    //b,e
+                    if (b > e) {
+                        //b
+                        document.writeln("B is max")
+                    } else {
+                        //e
+                        document.writeln("E is max")
+                    }
+                } else {
+                    //d,e
+                    if (d > e) {
+                        //d
+                        document.writeln("D is max")
+                    } else {
+                        //e
+                        document.writeln("E is max")
+                    }
+                }
+            } else {
+                //c,d,e
+                if (c > d) {
+                    //c,e
+                    if (c > e) {
+                        //c
+                        document.writeln("C is max")
+                    } else {
+                        //e
+                        document.writeln("E is max")
+                    }
+                } else {
+                    //d,e
+                    if (d > e) {
+                        //d
+                        document.writeln("D is max")
+                    } else {
+                        //e
+                        document.writeln("E is max")
+                    }
+
+                }
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
