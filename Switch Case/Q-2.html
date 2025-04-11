@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case</title>
+</head>
+
+<body>
+
+    <script>
+
+        // wap print week name by user choice of number.using switch case..!
+
+        let day = parseInt(prompt("Enter a number (1-7):"));
+
+        switch (day) {
+            case 1:
+                document.writeln("Sunday");
+                break;
+            case 2:
+                document.writeln("Monday");
+                break;
+            case 3:
+                document.writeln("Tuesday");
+                break;
+            case 4:
+                document.writeln("Wednesday");
+                break;
+            case 5:
+                document.writeln("Thursday");
+                break;
+            case 6:
+                document.writeln("Friday");
+                break;
+            case 7:
+                document.writeln("Saturday");
+                break;
+            default:
+                document.writeln("Invalid Number..! Please enter a number between 1 and 7.");
+        }
+
+
+    </script>
+
+</body>
+
+</html>

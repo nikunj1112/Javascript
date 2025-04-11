@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+
+<body>
+
+    <script>
+
+        // checks the value of TrafficLight and print the corresponding meaning of the traffic Light...! 
+
+        let trafficLight = prompt("Enter trafficlight color in lowercase (red, yellow, green🚦):")
+
+        switch (trafficLight) {
+            case "red":
+                light = "Red means Stop immediately...🔴"
+                break;
+            case "yellow":
+                light = "Yellow means Prepare to stop....🟡"
+                break;
+            case "green":
+                light = "Green means Proced or continue driving...🟢"
+                break;
+            default:
+                light = " Invalid traffic light color...🚫 "
+        }
+        document.writeln(light)
+
+    </script>
+
+</body>
+
+</html>
