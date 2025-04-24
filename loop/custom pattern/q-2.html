@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+//  1 2 3 4 5 5 4 3 2 1
+//  1 2 3 4     4 3 2 1
+//  1 2 3         3 2 1
+//  1 2             2 1
+//  1                 1
+
+
+
+        for (i = 5; i >= 1; i--) {
+            for (j = 1; j <= i; j++) {
+                document.writeln(j)
+            }
+            for (m = i; m <= 4; m++) {
+                document.writeln("&nbsp&nbsp")
+                document.writeln("&nbsp&nbsp")
+            }
+
+            for (p = i; p >= 1; p--) {
+                document.writeln(p)
+            }
+            document.writeln("<br>")
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
