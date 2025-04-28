@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // wap to print a 1 to n table using a function.
+        
+        let y = parseInt(prompt("Enter a number :"));
+        function table(y) {
+           
+            for (j = 1; j <= y; j++) {               
+                for (i = 1; i <= 10; i++) {                   
+                    document.writeln(`${j} x ${i} = ${j * i} <br>`);
+                }
+                document.writeln("<br>");
+            }
+        }
+        table(y);
+    </script>
+</body>
+
+</html>

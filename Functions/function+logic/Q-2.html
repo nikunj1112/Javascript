@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // wap to find the sum of 1 to n using a function.
+
+        function sum(n) {
+
+            var sum = 0;
+            for (var i = 1; i <= n; i++) {
+                sum = sum + i;
+            }
+            document.writeln(`The Sum of ${n} is ${sum}`);
+        }
+
+        var n = parseInt(prompt("Enter a number :"));
+        sum(n);
+
+    </script>
+
+</body>
+
+</html>
