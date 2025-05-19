@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // wap to find maximum element of array without using method.
+
+        var num = [4, 506, 26, 55, 87, 99]
+        var max;
+        max = num[0];
+
+        for (var i = 0; i < num.length; i++) {
+            if (num[i] > max) {
+                max = num[i]
+            }
+        }
+        document.write(`The maximum number in array is :- ${max}`);
+
+
+    </script>
+
+</body>
+
+</html>

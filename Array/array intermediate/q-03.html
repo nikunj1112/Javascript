@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // wap to sort array in acending order without using method.
+
+var nums = [15,58,23,1,10,42,59,63,99,100,29,74]
+
+for(var i=0; i<=nums.length; i++)
+{
+    for(var j=i+1; j<=nums.length; j++)
+    {
+        if(nums[i] > nums[j])
+        {
+             var temp = nums[i]
+             nums[i] = nums[j]
+             nums[j] = temp 
+        }
+    }
+}
+
+document.write(`Ascending order is :-  ${nums}`)
+
+    </script>
+</body>
+</html>

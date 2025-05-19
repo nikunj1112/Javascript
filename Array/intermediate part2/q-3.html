@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var name = prompt("Enter any Name and number to check Frequency : ")
+        var count;
+
+        for (var i = 0; i < name.length; i++) {
+            count = 0;
+
+            for (j = 0; j <= name.length; j++) {
+                if (name[i] == name[j]) {
+                    count++;
+                }
+            }
+            document.write(`${name[i]} - ${count}  <br> ` );
+
+        }
+    </script>
+
+</body>
+
+</html>

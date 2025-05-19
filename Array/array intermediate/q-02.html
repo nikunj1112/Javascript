@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        
+// wap to find minimum element of array without using method.
+
+var numbers = [15,85,566,25,20,4,89,100,23,34]
+var min; 
+min = numbers[0]; 
+
+for(var i=0; i<numbers.length; i++)
+{
+    if(numbers[i] < min)
+    {
+        min = numbers[i]
+    }
+}
+document.write(`The minimum number in array is :- ${min}`);
+
+
+    </script>
+    
+</body>
+</html>
