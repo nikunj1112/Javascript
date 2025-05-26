@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //  wap will print the factorial of the passed number in UDF.
+
+        function factorial(f) {
+
+            var factorial = 1;
+            for (var i = 1; i <= f; i++) {
+                factorial = factorial * i;
+
+            }
+            document.writeln(`The factorial of ${f} is ${factorial}`)
+        }
+        var f = parseInt(prompt("Enter a number : "));
+        factorial(f);
+
+
+
+    </script>
+
+</body>
+
+</html>

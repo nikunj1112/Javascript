@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- wap to check given number is Armstrong or not. -->
+
+    <script>
+
+        function Armstrong(num) {
+            var temp = num;
+            var arm = 0;
+            while (temp > 0) {
+                var id = temp % 10;
+                var digit = 1;
+                for (var i = 1; i <= count(num); i++) {
+                    digit = digit * id
+                }
+                arm = arm + digit;
+                temp = Math.floor(temp /= 10);
+            }
+            if (arm == num) {
+                document.writeln(`${num} is an Armstrong number.`)
+            } else {
+                document.writeln(`${num} is not an Armstrong number.`)
+            }
+        }
+        function count(num) {
+
+            let i = 0;
+            while (num > 0) {
+                num = Math.floor(num /= 10);
+                i++;
+            }
+            return i;
+        }
+
+        Armstrong(54678);
+
+
+    </script>
+
+</body>
+
+</html>

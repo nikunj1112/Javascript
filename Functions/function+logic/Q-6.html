@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    // check number is palindrom or not. - 121 == 121
+
+    
+function isPalindromeNumber(num) {
+    let number = num;
+    let reversed = 0;
+
+
+    while (num !== 0) {
+        let remainder = num % 10; // 2  3  4  3  2
+        reversed = reversed * 10 + remainder; // 2  23  234  2343  23432
+        num = Math.floor(num / 10); //2343  234  23  2 
+    }
+    if (number == reversed) {
+        document.writeln(`${number} is a palindrome number.`);
+    } else {
+        document.writeln(`${number} is not a palindrome number.`);
+    }
+}
+let num = parseInt(prompt("Enter a number:")); //23432
+isPalindromeNumber(num);
+
+
+</script>
+
+</body>
+</html>
