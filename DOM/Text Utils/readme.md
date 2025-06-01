@@ -48,3 +48,14 @@
 
 ## 🗂️ Project Structure
 
+text-utils/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── assets/
+│   ├── screenshot1.png
+│   └── screenshot2.png
+└── README.md
+
