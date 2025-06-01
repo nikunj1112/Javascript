@@ -30,7 +30,12 @@
 
 📽️ Watch the demo video to see the tool in action:
 
-👉 [`text-utils-demo.mp4`](./1748721497587060.mp4)
+👉 
+
+
+https://github.com/user-attachments/assets/eb09c406-52bf-4963-9f09-eae2e9e36924
+
+
 
 ---
 
