@@ -27,7 +27,13 @@ This project is a simple, interactive web application that generates a random ba
 
 Check out the app in action! 👇
 
-*(Please insert your ` 1748589325415876 2.mp4 ` video here, or a GIF if preferred, for a live preview.)*
+*(Please insert your ` 
+
+
+https://github.com/user-attachments/assets/174cfd2f-7cff-4623-86c1-4c57907be3c6
+
+
+` video here, or a GIF if preferred, for a live preview.)*
 
 
 ### Preview Frames:
