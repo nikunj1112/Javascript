@@ -19,96 +19,106 @@
         box-sizing: border-box;
 
     }
+
     body {
-          
-            background: linear-gradient(143deg,  #f0f0f0 50%,  #a0e9ff  50%);
-            height: 100vh;
-        }
+
+        background: linear-gradient(143deg, #f0f0f0 50%, #a0e9ff 50%);
+        height: 100vh;
+    }
 
     .main {
         height: 100vh;
-        width:100%;
+        width: 100%;
         display: flex;
         align-items: center;
         cursor: pointer;
-        
+
     }
-    .container
-    {
-        border: 1px solid black;
+
+    .container {
+        border: 1px solid rgb(151, 149, 149);
+        background-color: whitesmoke;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
         border-radius: 10px;
         padding: 40px;
         width: 50%;
     }
-    .header{
+
+    .header {
         display: flex;
         justify-content: center;
     }
-    .body{
+
+    .body {
         display: flex;
         justify-content: center;
         padding-bottom: 20px;
     }
-    .footer{
+
+    .footer {
         display: flex;
         justify-content: center;
     }
-    
+
 
     h2 {
-        color: black;
+        color:rgb(89, 89, 89);
+        text-shadow: 0px 0px 10px #38ccf9c6,
+            0px 0px 20px #58cef2e0;
         font-size: 34px;
         font-weight: normal;
         letter-spacing: 2px;
         padding-bottom: 20px;
-       
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     }
 
     h2:hover {
-        color: white;
-        text-shadow: 0px 0px 10px rgb(255, 0, 0),
-            0px 0px 20px red;
-            
-        transition: all ease-in-out 0.5s;
+        color: black;
+        transition: all ease-in-out 0.3s;
     }
+
     .btn {
-            border: 1.8px solid rgb(154, 153, 153);
-            margin-right: 2px;
-            margin-top: 10px;
-            font-weight: 500;
-            background-color: #f0f0f0;
+        border: 1.8px solid rgb(154, 153, 153);
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 10px;
+        font-weight: 500;
+        background-color: #f0f0f0;
 
-        }
+    }
 
-        .btn:hover {
-            background-color: #f0f0f0;
-            outline: none;
-            border: 1.8px solid #f0f0f0;
+    .btn:hover {
+        background-color: #a0e9ff;
+        outline: none;
+        border: 1.8px solid #a0e9ff;
 
-        }
 
-    
+
+    }
 </style>
 
 <body>
 
-   
-<div class="main">
-    <div class="container">
-        <div class="header">
-            <h2>Random quotes generator</h2>
-        </div>
-        <div class="body">
-            <textarea class="form-control " id="quote" placeholder="" style="height: 100px;width: 70%;"></textarea>
-        </div>
-        <div class="footer">
-            <button class="btn" id="quote-btn">Refresh</button>
+
+    <div class="main">
+        <div class="container">
+            <div class="header">
+                <h2>Random quotes generator</h2>
+            </div>
+            <div class="body">
+                <textarea class="form-control " id="quote" placeholder=""
+                    style="height: 150px;width: 80%; font-family: Verdana, Geneva, Tahoma, sans-serif;color:rgb(100, 99, 99);"></textarea>
+            </div>
+            <div class="footer">
+                <button class="btn rounded-pill me-5" id="quote-btn">Refresh</button>
+                <button class="btn rounded-pill " id="copy-btn">Copy quotes..!</button>
+            </div>
         </div>
     </div>
-</div>
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
