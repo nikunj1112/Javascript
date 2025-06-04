@@ -154,9 +154,17 @@ const Randomquote =  [
 
 const quotes = document.getElementById("quote")
 const quotesBtn = document.getElementById("quote-btn")
+const copyBtn = document.getElementById("copy-btn")
 
 quotesBtn.addEventListener("click",()=>{
     var chang = Math.floor(Math.random()* Randomquote.length);
     quotes.textContent = Randomquote[chang].quote
 
 });
+
+copyBtn.addEventListener("click",()=>{
+let copy = quotes.textContent;
+navigator.clipboard.writeText(copy)
+alert("Quotes Copied..!")
+});
+
