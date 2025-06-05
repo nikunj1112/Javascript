@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Note Maker App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(145deg, #74ebd5 , #ACB6E5 );
+            height: 100vh;
+           
+            font-family: 'Segoe UI', sans-serif;
+            padding: 30px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 1px 1px 4px #333;
+        }
+
+       
+
+        textarea {
+            padding: 15px;
+            font-size: 1rem;
+            border-radius: 10px;
+            width: 90%;
+            border: none;
+            resize: none;
+            min-height: 100px;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px;
+            background:rgb(72, 71, 71);
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.7s ease;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background: #49a09d;
+        }
+
+    
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📝 Note Maker</h1>
+        <div class="input">
+            <textarea id="noteInput" placeholder="Write note here..." ></textarea>
+            <button id="NoteBtn"> ➕ Add Note</button>
+        </div>
+       
+    </div>
+</body>
+
+
+<script>
+
+const input = document.querySelector("#noteInput")
+const button = document.querySelector("#NoteBtn")
+const output = document.querySelector(".input")
+
+
+button.addEventListener("click" , ()=>{
+
+    const value=input.value;
+    const h4=document.createElement("h4");
+    h4.textContent=value;
+    output.appendChild(h4);
+    input.value=" ";
+
+    if (value == " ") {
+        alert("Please write note here...!");
+      
+      }
+
+})
+
+
+
+</script>
+
+</html>
