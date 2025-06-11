@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 2. create a class for Car with minimum 5 attributes, create 3 defferent objects with meaning ful name,
+     and set and get all information. -->
+
+
+</body>
+
+<script>
+
+    class Car {
+        brand;
+        model;
+        year;
+        color;
+        price;
+
+        display(brand, model, year, color, price) {
+
+            this.brand = brand
+            this.model = model
+            this.year = year
+            this.color = color
+            this.price = price
+
+        }
+    }
+
+    const Tesla = new Car();
+    Tesla.display("Tesla", "Model S", 2022, "Red", 8500000)
+    console.log(Tesla)
+ 
+    const BMW = new Car();
+    BMW.display("BMW", "X5", 2021, "Black", 7800000)
+    console.log(BMW)
+
+    const Hyundai = new Car();
+    Hyundai.display("Hyundai", "Creta", 2023, "White", 1600000)
+    console.log(Hyundai)
+
+
+</script>
+
+</html>

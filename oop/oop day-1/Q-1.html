@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 1. create a class for Student with minimum 5 attributes, create 3 defferent objects with meaning ful name, 
+     and set and get all information. -->
+
+</body>
+
+<script>
+
+    class Student {
+        name;
+        age;
+        gender;
+        standard;
+        rollNumber;
+
+        details(name, age, gender, standard, rollNumber) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.standard = standard;
+            this.rollNumber = rollNumber;
+        }
+    }
+
+    const Student1 = new Student();
+    Student1.details("nikunj", 17, "male", "11th", 38)
+    console.log(Student1)
+
+    const Student2 = new Student();
+    Student2.details("jugal", 15, "male", "9th", 25)
+    console.log(Student2)
+
+    const Student3 = new Student();
+    Student3.details("honey", 16, "female", "10th", 17)
+    console.log(Student3)
+
+
+
+</script>
+
+
+</html>

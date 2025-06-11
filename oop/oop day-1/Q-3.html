@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 3. create class for ATM, with checkBalance, withdraw, deposit. -->
+
+</body>
+
+<script>
+
+    class ATM {
+
+        debitCard;
+        atmPin;
+        checkBalance;
+        withdraw;
+        deposit;
+
+        display(debitCard, atmPin, checkBalance, withdraw, deposit) {
+
+            this.debitCard = debitCard;
+            this.atmPin = atmPin;
+            this.checkBalance = checkBalance - withdraw + deposit;
+            this.withdraw = withdraw;
+            this.deposit = deposit;
+
+        }
+    }
+
+    const atm = new ATM()
+    atm.display("RuPay", 7707, 3000, 500 , 100)
+    console.log(atm)
+
+
+</script>
+
+</html>
