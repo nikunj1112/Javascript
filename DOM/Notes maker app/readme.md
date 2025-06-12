@@ -22,7 +22,7 @@ This is a beautifully designed **Note Taking Web App** built using **HTML**, **C
 
 
 
-https://github.com/user-attachments/assets/d6483cf6-dbfa-411d-ab2f-42418fc3bfa4
+https://github.com/user-attachments/assets/89623941-e536-4fc7-bfb2-ed1244b62ca4
 
 
 
