@@ -29,14 +29,16 @@ function display() {
 
         btnGroup.className = "d-flex justify-content-between mt-3";
 
-        editBtn.className = "btn btn-sm btn-warning";
-        editBtn.textContent = "Edit";
+        editBtn.className = "btn1 ";
+        editBtn.innerHTML = "✏️"
+        editBtn.style.fontSize = "20px"
         editBtn.addEventListener("click", () => {
             edit(index);
         })
 
-        delBtn.className = "btn btn-sm btn-danger";
-        delBtn.textContent = "Delete";
+        delBtn.className = "btn1 ";
+        delBtn.innerHTML = "✖"
+        delBtn.style.fontSize = "24px"
         delBtn.addEventListener("click", () => {
             cancel(index);
         })
