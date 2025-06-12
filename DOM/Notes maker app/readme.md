@@ -20,7 +20,11 @@ This is a beautifully designed **Note Taking Web App** built using **HTML**, **C
 
 ## 📸 Preview
 
-![Note App Screenshot](https://images.unsplash.com/photo-1705097565168-fb30476501e5?q=80&w=900)
+
+
+https://github.com/user-attachments/assets/d6483cf6-dbfa-411d-ab2f-42418fc3bfa4
+
+
 
 ## 📂 How to Use
 
