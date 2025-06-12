@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Q-1. ATM  -->
+
+</body>
+</html>
+
+
+<script>
+    class ATM {
+    constructor(debit, pin, balance) {
+        this.debit = debit;
+        this.pin = pin;
+        this.balance = balance;
+    }
+
+    setPin(pin) {
+        this.pin = pin;
+        if (this.pin === pin) {
+            alert("🔐 Pin is created successfully");
+        }
+     
+    }
+
+    deposit(debit, pin, amount) {
+        if (this.pin === undefined) {
+            alert("⚠️ Generate PIN first!");
+        } else if (this.pin === pin) {
+            this.balance = this.balance + amount;
+            console.log("💰 Your balance after deposit:", this.balance);
+        } else {
+            alert("❌ Incorrect PIN.");
+        }
+    }
+
+    checkBalance(debit, pin) {
+        if (this.pin === undefined) {
+            alert("⚠️ Generate PIN first!");
+        } else if (this.pin === pin) {
+            console.log("💳 Your balance is:", this.balance);
+        } else {
+            alert("❌ Incorrect PIN.");
+        }
+    }
+
+    withdraw(debit, pin, amount) {
+        if (this.pin === undefined) {
+            alert("⚠️ Generate PIN first!");
+        } else if (this.pin === pin) {
+            if (amount < this.balance) {
+                this.balance = this.balance - amount;
+                console.log("💸 Your balance after withdrawal:", this.balance);
+            } else {
+                alert("🚫 Insufficient balance.");
+            }
+        } else {
+            alert("❌ Incorrect PIN.");
+        }
+    }
+}
+
+
+const atm = new ATM("RuPay", 1234, 1000);
+
+atm.setPin(7077);                  // Set the PIN
+atm.deposit("RuPay", 7077,500 );   // Deposit money
+atm.checkBalance("RuPay", 7077);   // Check balance
+atm.withdraw("RuPay", 7077, 10);   // Withdraw money
+
+</script>
