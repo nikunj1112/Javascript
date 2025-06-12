@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+  <style>
+    body {
+      background-image: url("https://images.unsplash.com/photo-1705097565168-fb30476501e5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: #000000;
+    }
+
+    h2,
+    h1 {
+      color: black;
+      text-shadow: 1px 1px 3px rgba(52, 51, 51, 0.5);
+    }
+
+    .line {
+      width: 65%;
+      margin: auto;
+
+
+    }
+
+    .note-form {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.20);
+    }
+
+    .note-card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 10px;
+      width: 260px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+      transition: all 0.3s ease;
+    }
+
+    .note-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .note-title {
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .note-card p {
+      color: #4a4a4a;
+    }
+
+    .btn-custom {
+      min-width: 100px;
+    }
+
+    textarea::placeholder,
+    input::placeholder {
+      color: #6c757d;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .btn-warning {
+      background-color: #f39c12;
+      border: none;
+    }
+
+    .btn-warning:hover {
+      background-color: #e0a800;
+    }
+
+    .btn-danger {
+      background-color: #e74c3c;
+      border: none;
+    }
+
+    .btn-danger:hover {
+      background-color: #c0392b;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <div class="container pt-4">
+    <h1 class="text-center mb-3 ">📝 Note App</h1>
+    <hr class="line">
+
+
+    <div class="note-form w-50 mx-auto p-4  mt-4">
+      <div class="mb-3">
+        <input type="text" id="title" class="form-control" placeholder="Enter title..." />
+      </div>
+      <div class="mb-3">
+        <textarea id="note" rows="5" class="form-control" placeholder="Write your note..."></textarea>
+      </div>
+      <div class="text-center">
+        <button id="add" class="btn btn-dark btn-custom me-2"> Add</button>
+        <button id="delete" class="btn btn-outline-danger btn-custom">Clear All</button>
+      </div>
+    </div>
+
+
+    <h2 class="text-center mt-5 ">📚 Your Notes</h2>
+    <div id="outputBox" class="d-flex flex-wrap justify-content-center mt-4"></div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
