@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body {
+        background-image: url(" https://images.unsplash.com/photo-1475257026007-0753d5429e10?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 100vh;
+        font-family: "poppins", sans-serif;
+    }
+
+    .container {
+        background-color: whitesmoke;
+        border-radius: 10px;
+        max-width: 600px;
+        width: 100%;
+        padding: 0px;
+         box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5); 
+
+    }
+
+    .quiz-header {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+    }
+
+    .quiz-header h1 {
+        font-size: 35px;
+        padding: 10px;
+        margin: 0%;
+    }
+
+    .quiz-body {
+        padding: 10px 30px 30px 30px;
+ 
+    }
+
+    .quiz-body h5 {
+        font-size: 20px;
+        padding: 10px;
+        font-weight: 500;
+       
+
+    }
+    .quiz-body ul{
+        list-style: none;
+        padding: 0%;
+    }
+    .quiz-body ul li{
+        margin: 10px;
+        font-size: 18px;
+        border: 1.5px solid black;
+        padding: 8px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+  .quiz-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
+  }
+ 
+
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="quiz-header">
+            <h1>Technology Quiz</h1>
+        </div>
+       
+
+        <div class="quiz-body">
+            <h5 id="Question" > </h5>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" class="answer">
+                    <label>A .</label>
+                    <span class="option"></span>
+                </li>
+                <li>
+                    <input type="radio" name="answer" class="answer">
+                    <label>B .</label>
+                    <span class="option"></span>
+                </li>
+                <li>
+                    <input type="radio" name="answer" class="answer">
+                    <label>C .</label>
+                    <span class="option"></span>
+                </li>
+                <li>
+                    <input type="radio" name="answer" class="answer">
+                    <label>D .</label>
+                    <span class="option"></span>
+                </li>
+            </ul>
+            
+            <p id="score"> </p>
+        </div>
+
+
+        <div class="quiz-footer">
+            <div class="quiz-details "></div>
+            <button class="btn btn-outline-dark" id="btn">Submit & next</button>
+
+
+        </div>
+
+        
+    </div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
