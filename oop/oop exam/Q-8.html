@@ -14,13 +14,9 @@
 
 </body>
 
-
 <script>
 
-    //Create a Bird class with a method makeSound(). Then create Sparrow and Parrot classes that override the makeSound() method with their
-    //  unique sounds.
-
-    class Bird {
+class Bird {
         name;
         sound;
 
@@ -31,8 +27,8 @@
 
         makeSound() {
 
-            console.log(`Name is ${this.name}`);
-            console.log(`Sound is ${this.Sound}`); 
+            console.log(`Name is bird ${this.name}..!`);
+            console.log(`${this.name} Sound is ${this.sound}.`); 
         }
     }
 
@@ -49,11 +45,13 @@
     }
 
 
-    const B1 = new Sparrow("Sparrow", "Chirp");
+    const B1 = new Sparrow("Sparrow 🐥 ", "Chirp");
     B1.makeSound();
-    const B2 = new Parrot("Parrot", "Squawk");
+    const B2 = new Parrot("Parrot 🦜", "Squawk");
     B2.makeSound();
 
+
+    
 </script>
 
 </html>
