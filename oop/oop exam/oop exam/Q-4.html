@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 4.  Create a Calculator class that hides the internal result property (e.g., using #result). Add methods to add(num),
+    subtract(num), and getResult(). -->
+
+</body>
+
+<script>
+
+    class Calculator {
+
+        #result;
+
+        constructor(result = 0) {
+            this.#result = result;
+        }
+
+        add(number) {
+            this.#result = this.#result + number;
+        }
+
+        subtract(number) {
+            this.#result = this.#result - number;
+        }
+
+        getResult() {
+
+            console.log(`Result : ${this.#result}`);
+
+        }
+    }
+
+    const calculator = new Calculator();
+    calculator.add(10);
+    calculator.subtract(3);
+    calculator.getResult();
+
+</script>
+
+</html>

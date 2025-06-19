@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 9. Create a Shape class with a method area(). Then create Circle and Square classes that extend Shape and implement
+    their own area() logic. -->
+
+
+
+</body>
+
+<script>
+
+    class Shape {
+
+        constructor(name, area) {
+            this.name = name;
+            this.area = area;
+
+        }
+
+        Area() {
+            console.log(`Shape name : ${this.name}`);
+            console.log(`Area : ${this.area.toFixed(2)}`);
+
+        }
+
+    }
+
+    class Circle extends Shape {
+
+        constructor(radius){
+            super("Circle", Math.PI * radius * radius);
+        }
+
+     
+    }
+
+    class Square extends Shape {
+
+        constructor(side){
+            super("Square", side * side);
+        }
+
+    }
+
+    const C1 = new Circle(5);
+    C1.Area();
+
+    const S1 = new Square(23);
+    S1.Area();
+
+
+
+
+</script>
+
+</html>

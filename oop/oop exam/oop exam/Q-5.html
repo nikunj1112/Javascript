@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 5. Create a BankAccount class where balance is private. Add deposit(amount), withdraw(amount), and getBalance()
+    methods. Try to access balance directly (it should not work). -->
+
+</body>
+
+<script>
+
+    class BankAccount {
+        #balance;
+
+        constructor(balance = 1000) {
+            this.#balance = balance;
+        }
+
+        deposit(amount) {
+            this.#balance = this.#balance + amount;
+            console.log(`Deposit amonut balance is : ₹ ${amount} `);
+
+        }
+        withdraw(amount) {
+            this.#balance = this.#balance - amount;
+            console.log(`withdraw amonut balance is : ₹ ${amount} `);
+
+        }
+
+        getBalance() {
+
+            console.log(`Current balance is : ₹ ${this.#balance}`);
+     
+        }
+
+    }
+
+    const account = new BankAccount ();
+    account.deposit(8000);
+    account.withdraw(500);
+    account.getBalance();
+
+
+</script>
+
+</html>

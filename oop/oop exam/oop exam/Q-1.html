@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 1. Create a Car class that has brand and model properties. Use a constructor to initialize them. Create a method
+    getDetails() that returns the full name of the car. -->
+
+</body>
+
+<script>
+
+class Car{
+    constructor(brand , model ){
+        this.brand = brand;
+        this.model = model;
+
+    }
+
+    getDetails(brand,model){
+
+        console.log(`Brand of car  : ${this.brand}`);
+        console.log(`Model of car  : ${this.model}`);
+
+    }
+}
+
+const car = new Car("BMW" , "X5-200");
+car.getDetails();
+
+</script>
+
+</html>
