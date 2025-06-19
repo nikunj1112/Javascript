@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 2.Create a Person class that stores name and age. Make age private (use closure or #age) and provide methods to
+    getAge() and setAge() safely. -->
+
+</body>
+
+<script>
+
+class Person{
+    name;
+    #age;
+
+    setAge(name , age){
+        this.name = name;
+        this.#age = age;
+
+    }
+
+    getAge(){
+
+        console.log(`person name is : ${this.name}`);
+        console.log(`person age is : ${this.#age}`);
+
+    }
+}
+
+const person = new Person();
+person.setAge("Nikunj" , 20);
+person.getAge();
+
+
+</script>
+
+</html>

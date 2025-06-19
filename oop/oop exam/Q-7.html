@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 7 . Create a Person class with a method greet(). Create a Student class that extends Person and adds a method
+    study(). Use both methods on a Student object. -->
+
+
+
+</body>
+
+<script>
+
+    class Person {
+
+        greet() {
+            console.log(`Welcome...!`);
+        }
+
+
+    }
+
+    class Student extends Person {
+
+        study(name, std) {
+            super.greet()
+            this.name = name;
+            this.std = std;
+            console.log(`Student name is ${this.name}`);
+            console.log(`Student std is ${this.std}`);
+
+        }
+    }
+
+    const student1 = new Student();
+
+    student1.study("nikunj", 12)
+
+
+</script>
+
+</html>
