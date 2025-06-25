@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d1dbbd;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .login {
+            background-color: #d1dbbd;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 #3e606f, 0 6px 20px 0 #193441;
+        }
+
+        .login-inset {
+            background-color: #d1dbbd;
+            border-radius: 20px;
+            box-shadow: inset 0 4px 8px 0 #3e606f, inset 0 6px 20px 0 #193441;
+        }
+
+        .login-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            width: 350px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3e606f;
+            margin-bottom: 20px;
+        }
+
+        .login-input {
+            padding: 15px;
+            width: 80%;
+            font-size: 16px;
+            color: #3e606f;
+            border: none;
+            outline: none;
+            margin-bottom: 25px;
+        }
+
+        .login-input::placeholder {
+            color: #3e606f;
+        }
+
+        .login-button {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #3e606f;
+            cursor: pointer;
+            transition: 2s;
+            border: none;
+        }
+
+        .login-button:hover {
+            box-shadow: inset 0 4px 8px 0 #3e606f, inset 0 6px 20px 0 #193441;
+            color: #91aa9d;
+            transition: 1s;
+        }
+
+        p#input {
+            margin-bottom: 0px;
+            margin-top: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login login-card">
+        <h1>Login</h1>
+        <input type="text" id="email" class="login login-input" placeholder="Email">
+        <input type="password" id="password" class="login login-input" placeholder="Password">
+        <button class="login login-button" id="loginBtn">Sign In</button>
+        <p id="input"> </p>
+
+    </div>
+
+</body>
+
+
+<script src="script.js"></script>
+
+</html>
