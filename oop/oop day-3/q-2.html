@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 2. Define a class named `Employee` with private attributes `name`, `salary`, and `designation`. Encapsulate these
+    attributes using appropriate access specifiers. Implement public member functions to set and get the values of these
+    attributes. Demonstrate the encapsulation concept by accessing these attributes through the member functions. -->
+
+</body>
+
+
+<script>
+
+    class Employee { //create a Employee name class.
+
+        #name; //create a private attribute an name #name.
+        #salary; //create a private attribute an name #salary.
+        #designation; //create a private attribute an name #designation.
+
+
+
+        setValues(name, salary, designation) { //create a method, this method name setValue with parameter (name,salary,designation) is passed to it.
+            this.#name = name; // assign the value of local variable to global variable with (this.) keyword.
+            this.#salary = salary; // assign the value of local variable to global variable with (this.) keyword.
+            this.#designation = designation; // assign the value of local variable to global variable with (this.) keyword.
+
+
+        }
+        getValues() { // create a method, this method name is getValue.
+
+            console.log(` Employee  name : ${this.#name}`)  //print the message Employee name
+            console.log(` Employee  salary : ${this.#salary}`) //print the message Employee salary
+            console.log(` Employee  designation : ${this.#designation}`) //print the message Employee designation
+
+        }
+
+    }
+
+    const E1 = new Employee(); // It creates a new object E1 of the  Employee class.
+    E1.setValues("Nikunj rana", 25000, "full stack developer"); // It sets the Employee details (like name, salary, and job title) of the E1 object using the setValues method.
+    E1.getValues()//It calls the getValue() method of the E1 object.
+
+
+    const E2 = new Employee(); // It creates a new object E2 of the  Employee class.
+    E2.setValues(" Jugal rana", 28000, "full stack developer"); // It sets the Employee details (like name, salary, and job title) of the E2 object using the setValues method.
+    E2.getValues()//It calls the getValue() method of the E2 object.
+
+
+    const E3 = new Employee(); // It creates a new object E3 of the  Employee class.
+    E3.setValues(" Krish rana", 22000, "ui ux developer");// It sets the Employee details (like name, salary, and job title) of the E3 object using the setValues method.
+    E3.getValues()//It calls the getValue() method of the E3 object.
+
+</script>
+
+</html>

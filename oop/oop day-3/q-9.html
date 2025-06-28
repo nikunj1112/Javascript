@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 9.Create a class `Laptop` with private attributes `name`, `price`, `processor`, and a parameterized constructor.
+    Demonstrate the instantiation of objects using this constructor. -->
+
+</body>
+
+<script>
+
+    class Laptop {
+
+        #name; //create a private attribute name.
+        #price; //create a private attribute price.
+        #processor; //create a private attribute processor.
+
+        constructor(name, price, processor) { //create constructor with parameter (name,price,processor) passed to it.
+            this.#name = name; //assign the value of local variable name to global private variable name with (this.) keyword.//this keyword is using for global variable.
+            this.#price = price; //assign the value of local variable name to global private variable name with (this.) keyword.//this keyword is using for global variable.
+            this.#processor = processor; //assign the value of local variable name to global private variable name with (this.) keyword.//this keyword is using for global variable.
+        }
+
+        displayDetails() {
+            console.log(`Laptop Name  : ${this.#name}`); //print the message Name of laptop.
+            console.log(`Price        : ₹${this.#price}`); //print the message Price of laptop.
+            console.log(`Processor    : ${this.#processor}`); //print the message Processor of laptop.
+            console.log('-------------------------------'); //print the line message to visually separate output in the console.
+        }
+    }
+
+    const laptop1 = new Laptop("HP Pavilion", 55000, "Intel i5");  //create a new object laptop1 using the class Laptop and set the value(name,price,processor).
+    const laptop2 = new Laptop("Dell Inspiron", 62000, "Intel i7"); //create a new object laptop2 using the class Laptop and set the value(name,price,processor).
+    const laptop3 = new Laptop("Lenovo IdeaPad", 48000, "AMD Ryzen 5"); //create a new object laptop3 using the class Laptop and set the value(name,price,processor).
+ 
+
+    console.log("Laptop Details: ");
+    laptop1.displayDetails(); //call display method of laptop1 object to show laptop data.
+    laptop2.displayDetails(); //call display method of laptop2 object to show laptop data.
+    laptop3.displayDetails(); //call display method of laptop3 object to show laptop data.
+
+
+</script>
+
+</html>

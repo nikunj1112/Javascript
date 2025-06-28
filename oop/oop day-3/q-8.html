@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 8. Define a class `Car` with private attributes `model`, `year`, and `speed`. Encapsulate these attributes using
+    appropriate access specifiers. Implement public member functions to set and get the values of these attributes.
+    Demonstrate encapsulation by accessing these attributes through the member functions. -->
+
+</body>
+
+<script>
+
+class Car // create a class name car.
+{
+    #model;//create a private attribute model.
+    #year;//create a private attribute year.
+    #speed;//create a private attribute speed.
+
+    set(model,year,speed)//create a method set with parameter (model,year,speed) passed to it.
+    {
+        this.#model=model;//assign the value to local variable model to global private variable model with (this.) keyword.//this keyword is used for global variable.
+        this.#year=year;//assign the value to local variable year to global private variable year with (this.) keyword.//this keyword is used for global variable.
+        this.#speed=speed;//assign the value to local variable speed to global private variable speed with (this.) keyword.//this keyword is used for global variable.
+    }
+
+    get()//create a method get
+    {
+       console.log(`Model : ${this.#model}`);//print car model.
+       console.log(`Year : ${this.#year}`);//print car year.
+       console.log(`Speed : ${this.#speed}`);//print car speed.
+
+    }
+}
+
+const car = new Car();//create a new object car using the class Car
+
+car.set("Tesla  Model'S ",2022,"220kmph");//call set method to set value.(name,year,speed).
+car.get();//call get method to display car data.
+
+</script>
+</html>

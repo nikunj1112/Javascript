@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 5. Create a class representing a `Book` with attributes like `title`, `author`, and `publishedYear`. Demonstrate the
+    instantiation of objects using array and accessing their attributes. -->
+
+</body>
+
+<script>
+
+    class Book { //create a Book name class.
+
+        constructor(title, author, publishedYear) { //create constructor with parameter (title, author, publishedYear) passed to it.
+            this.title = title; //assign the value of local variable to global variable with (this.) keyword.
+            this.author = author;//assign the value of local variable to global variable with (this.) keyword.
+            this.publishedYear = publishedYear;//assign the value of local variable to global variable with (this.) keyword.
+        }
+
+        displayDetails() { // create a method, this method name is displayDetails.
+            console.log(`Title: ${this.title}`); //print the message Title of books.
+            console.log(`Author: ${this.author}`); //print the message Author of books.
+            console.log(`Published Year: ${this.publishedYear}`); //print the message PublishedYear of books.
+            console.log('--------------------------------'); //print the line message to visually separate output in the console.
+        }
+    }
+
+
+    const books = [  // Declares a variable. name of the variable is M1 and create a new Array.
+        new Book("To Kill a Mockingbird", "Harper Lee", 1960), //Creates a new Book object with the title , author , and published year.
+        new Book("1984", "George Orwell", 1949), //Creates a new Book object with the title , author , and published year.
+        new Book("The Alchemist", "Paulo Coelho", 1988), //Creates a new Book object with the title , author , and published year.
+        new Book("The God of Small Things", "Arundhati Roy", 1997) //Creates a new Book object with the title , author , and published year.
+    ];
+
+
+    books.forEach((book, index) => { // It loops through each Book in the M1 array and gives access to both the book and its index.
+        console.log(`Book ${index + 1}:`);  //It prints the movie number (starting from 1) to the console.
+        book.displayDetails(); //It calls the displayDetails() method .
+    });
+
+
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+  class Movie { //create a Movie name class.
+    constructor(title, genre, releasedYear) { //create constructor with parameter (title, genre, releasedYear) passed to it.
+      this.title = title; // assign the value of local variable to global variable with (this.) keyword.
+      this.genre = genre; // assign the value of local variable to global variable with (this.) keyword.
+      this.releasedYear = releasedYear; // assign the value of local variable to global variable with (this.) keyword.
+    }
+  
+    getDetails() { // create a method, this method name is getDetails.
+      console.log(`Title: ${this.title}, Genre: ${this.genre}, Year: ${this.releasedYear}`); //print the message Title, Genre, Year of movie.
+    }
+  }
+  
+  var M1 = [  // Declares a variable. name of the variable is M1 and create a new Array.
+    new Movie("Inception", "Science Fiction", 2010), 
+    new Movie("The Dark Knight", "Action", 2008),
+    new Movie("Interstellar", "Sci-Fi", 2014),
+    new Movie("3 Idiots", "Comedy/Drama", 2009)
+  ];
+  
+  M1.forEach((movie, index) => { // It loops through each movie in the M1 array and gives access to both the movie and its index.
+    console.log(`Movie ${index + 1}:`); //It prints the movie number (starting from 1) to the console.
+    movie.getDetails(); //It calls the getDetails() method of the current movie to print its title, genre, and release year.
+  });
+  </script>
+  
+
+</html>

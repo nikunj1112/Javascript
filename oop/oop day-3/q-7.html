@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 7.Create a class `Student` with private attributes `name`, `rollNumber`, and a parameterized constructor.
+    Demonstrate the instantiation of objects using this constructor with help of array. -->
+
+</body>
+
+<script>
+
+
+    class Student // create a class name Student.
+    {
+        #name;//create a private attribute name.
+        #rollNumber;//create a private attribute rollNumber.
+
+        constructor(name, rollNumber)//create constructor with parameter (name,rollNumber) passed to it.
+        {
+            this.#name = name;//assign the value of local variable name to global private variable name with (this.) keyword.//this keyword is used for global variable.
+            this.#rollNumber = rollNumber;//assign the value of local variable rollNumber to global private variable rollNumber with (this.) keyword.//this keyword is used for global variable.
+        }
+
+        display()//create a method display.
+        {
+            console.log(`Name: ${this.#name}`); //print the message Name of student.
+            console.log(`Roll Number: ${this.#rollNumber}`); //print the message rollNumber of student.
+            console.log('------------------------'); //print the line message to visually separate output in the console.
+
+        }
+    }
+
+    let Students = [ // create an array name Students to store multiple student object data.
+        new Student(" Nikunj Rana", 1),//create a student object and store it in array.  
+        new Student(" Riya Patel", 2),//create another student object and store it in array. 
+        new Student("Amit Shah", 3),//create another student object and store it in array. 
+
+    ]
+
+    Students.forEach((Student,index)  => { //using loop to display student data.
+        Student.display() //call display method.
+    });
+
+    
+
+</script>
+
+</html>

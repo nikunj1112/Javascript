@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 1. Define a class named Rectangle with private attributes length and width. Implement public member functions to set
+       and get the values of these attributes. Include a method to calculate the area of the rectangle. Create an object of
+       the Rectangle class and demonstrate the functionality of the implemented methods. -->
+
+</body>
+
+<script>
+
+    class Rectangle { //create a Rectangle name class.
+
+        #length; //create a private attribute an name length.
+        #width;  //create a private attribute an name width
+
+        setValue(length, width) { //create a method, this method name setValue with parameter (length,width) is passed to it.
+            this.#length = length; // assign the value of local variable to global variable with (this.) keyword.
+            this.#width = width; // assign the value of local variable to global variable with (this.) keyword.
+        }
+
+        getValue() { // create a method, this method name is getValue.
+            console.log(`length of rectangle  : ${this.#length}`);  //print the message length of rectangle.
+            console.log(`width of rectangle  : ${this.#width}`);  //print the message width of rectangle.
+
+        }
+
+        area() { // create a method, this method name is area.
+            console.log(`Area of the reactangle :  ${(this.#length * this.#width)}`) //print the message Area of the rectangle.
+        }
+
+    }
+
+    const R1 = new Rectangle(); // It creates a new object R1 of the Rectangle class.
+    R1.setValue(2, 5); //It sets the private attribute (#length = 2 and #width = 5) of the R1 object using the setValue method.
+    R1.getValue() //It calls the getValue() method of the R1 object 
+    R1.area(); // It calls the Area() method of the R1 object
+
+
+</script>
+
+</html>

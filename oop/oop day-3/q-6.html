@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 6. Define a class `Person` with private attributes `name`, `age`, and `address`. Encapsulate these attributes using
+    getter and setter methods. Implement a parameterized constructor for the `Person` class. Create N number of objects
+    using this constructor and display the details. -->
+
+</body>
+
+<script>
+
+class Person//create a class name person.
+{
+
+    #name;//create a private attribute name.
+    #age;//create a private attribute age.
+    #address;//create a private attribute address.
+
+    constructor(name,age,address) //create a constructor with parameter (name,age,address) passed to it.
+    {
+        this.#name=name;//assign the value of local variable name to global private variable of name with (this.) keyword.//this keyword is used for global variable.
+        this.#age=age;///assign the value of local variable age to global private variable of age with (this.) keyword.//this keyword is used for global variable.
+        this.#address=address;//assign the value of local variable address to global private variable of address with (this.) keyword.//this keyword is used for global variable.
+    }
+
+      get()//create a method get.
+    {
+        return;
+    }
+    
+    set(name,age,address)//create a method set with paramter (name,age,address) passed to it.
+    {
+        this.#name=name;///assign the value of local variable name to global private variable of name with (this.) keyword.//this keyword is used for global variable.
+        this.#age=age;//assign the value of local variable age to global private variable of age with (this.) keyword.//this keyword is used for global variable.
+        this.#address=address;//assign the value of local variable address to global private variable of address with (this.) keyword.//this keyword is used for global variable.
+    }
+
+
+    display()//create a method display to display person details.
+    {
+        console.log(` Name is : ${this.#name}`);//print person name.
+        console.log(` Age : ${this.#age}`);//print person age.
+        console.log(` Address : ${this.#address}`);//print person address.
+        console.log('------------------------'); //print the line message to visually separate output in the console.
+    }
+}
+
+
+const p1 = [ // create an array of 5 person 
+    new Person("Ramesh Vasava",50,"Ahmedabad"),//create 1 object with values.
+    new Person("Dinesh Gohil",42,"Surat"),
+    new Person("Chirag Parmar",24,"Ahmedabad"),
+    new Person("krish Patel",20,"Surat"),
+    new Person("Amit Shah",32,"Baroda")
+
+];
+
+p1.forEach((p,index)=>{  // using a for loop to display all object from array.
+p.display(); //call the method display for each object.
+})
+
+</script>
+
+</html>

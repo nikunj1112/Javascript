@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 1. Define a base class `Shape` with private attributes `color` and `area`. Implement public member functions for
+    setting and getting the color and calculating the area. Derive two classes, `Circle` and `Rectangle`, from the
+    `Shape` class. Implement methods to calculate the area specific to each shape. -->
+
+</body>
+
+<script>
+
+    class Shape { // create a Shape name class.
+
+        #color; //create a private attribute an name #color.
+        #area; //create a private attribute an name #area.
+
+        settingValues(color, area) { //create a method, this method name settingValues with parameter (color, area) is passed to it.
+            this.#color = color // assign the value of local variable to global variable with (this.) keyword.
+            this.#area = area // assign the value of local variable to global variable with (this.) keyword.
+
+        }
+
+        gettingValue() { // create a method, this method name is gettingValue.
+
+            console.log(`Shape color is ${this.#color}`) // print the message is Shape color.
+            console.log(`Shape area is ${this.#area}`) // print the message is Shape area.
+
+        }
+    }
+
+    class Circle extends Shape {  // its create a new class Circle. that extends to all methods and property from the parent class Shape.
+
+        constructor(radius, color) { //its create constructor for the Circle class that parameter (radius, color) passed to it.
+            super() // calls the parent class (Shape) constructor.
+            const area = Math.PI * radius * radius; //	Calculates the area of the circle.
+            this.settingValues(color, area) // 	Sets color and area using a method from the parent class
+        }
+
+    }
+
+    class Rectangle extends Shape { //its create a new class Rectangle, Rectangle is a child class that extends from the parent class Shape.
+
+        constructor(length, width, color) { //	Creates a constructor that takes 3 values (length, width, color).
+            super() // Call the constructor of the parent class (Shape).
+            const area = length * width; // Calculate area of rectangle.
+            this.settingValues(color, area)// Set color and area using parent class method.
+        }
+
+    }
+
+    const circle = new Circle(5, "red"); // Create a new circle object with radius 5 and color red, of the child class Circle, then calculates the area.
+    const rectangle = new Rectangle(3, 4, "yellow") //Create a new Rectangle object with length 3, width 4, and color yellow, then calculates and stores its area.
+
+    circle.gettingValue();//Calls the gettingValue method to print the color and area of the circle.
+    rectangle.gettingValue(); // Calls the gettingValue method to print the color and area of the rectangle.
+
+
+</script>
+
+</html>
