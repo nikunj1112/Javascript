@@ -40,7 +40,8 @@ random-dog-viewer/
 
 
 
-https://github.com/user-attachments/assets/1b4ca135-fc36-48e1-a34f-856de9f10f50
+https://github.com/user-attachments/assets/562a07e8-3b31-4edf-b8f6-cb7bc44754d9
+
 
 
 
