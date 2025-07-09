@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+h1 {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin: 0;
+      font-weight: 600;
+    
+
+    }
+
+    .table-container {
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    thead th {
+      position: sticky;
+      top: 88px;
+      background-color: #d1e7dd;
+    
+   
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="text-center">🦠 COVID-19 India Stats Dashboard 🦠</h1>
+
+        <table class="table table-success table-striped ">
+            <thead>
+                <tr class="main" >
+                    <th class="pt-3 pb-3" >S.NO</th>
+                    <th class="pt-3 pb-3" > State Name</th>
+                    <th class="pt-3 pb-3">Indian Cases</th>
+                    <th class="pt-3 pb-3">@Foreign Cases</th>
+                    <th class="pt-3 pb-3">Discharged</th>
+                    <th class="pt-3 pb-3">Deaths</th>
+                    <th class="pt-3 pb-3">Total Cases</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+
+<script>
+
+    let tbody = document.getElementById("tbody");
+
+    function todos(regionalData) {
+
+        regionalData.forEach((todo, index) => {
+
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            let td3 = document.createElement("td");
+            let td4 = document.createElement("td");
+            let td5 = document.createElement("td");
+            let td6 = document.createElement("td");
+            let td7 = document.createElement("td");
+
+            td1.textContent = index + 1;
+            tr.appendChild(td1);
+
+            td2.textContent = todo.loc;
+            tr.appendChild(td2);
+
+            td3.textContent = todo.confirmedCasesIndian;
+            tr.appendChild(td3);
+
+            td4.textContent = todo.confirmedCasesForeign;
+            tr.appendChild(td4);
+
+            td5.textContent = todo.discharged;
+            tr.appendChild(td5);
+
+            td6.textContent = todo.deaths;
+            tr.appendChild(td6);
+
+            td7.textContent =(todo.confirmedCasesIndian + todo.confirmedCasesForeign) ;
+            tr.appendChild(td7);
+
+
+            tbody.appendChild(tr);
+
+        });
+    }
+
+    fetch("https://api.rootnet.in/covid19-in/stats/latest")
+        .then((res) => res.json())
+        .then((data) => {
+            todos(data.data.regional);
+        })
+
+
+</script>
+
+</html>
