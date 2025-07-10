@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+         
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+
+        .container {
+            background: transparent;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(9.1px);
+            -webkit-backdrop-filter: blur(9.1px);
+        }
+
+        .container h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-size: 28px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+
+        img {
+            width: 600px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        button {
+            margin: 30px 6px 6px 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            background: rgba(0, 119, 182, 0.75);
+            border: none;
+            border-radius: 8px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        button:hover {
+            background: rgba(0, 118, 182, 0.989);
+            transform: translateY(-2px);
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.306),
+                0 2px 6px rgba(0, 0, 0, 0.41);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Image Slider</h2>
+
+        <img src="" id="img" alt="">
+
+        <div>
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+            <button id="auto">Auto Play</button>
+            <button id="stop">Stop Auto Play</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
