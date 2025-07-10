@@ -47,7 +47,11 @@ This project is a modern, responsive **image slider** built with **HTML, CSS, an
 
 ## 📸 Preview
 
-![Image Slider Preview](https://images.unsplash.com/photo-1559666126-84f389727b9a?q=80&w=800&auto=format&fit=crop)
+
+
+https://github.com/user-attachments/assets/cbddf462-2274-40e9-8f91-7e2150c4f8ac
+
+
 
 ---
 
@@ -66,4 +70,4 @@ This project is open-source and free to use for personal or educational purposes
 
 ---
 
-## 🙌 Made with ❤️ by [Your Name]
+## 🙌 Made with ❤️ by [Rana Nikunj]
