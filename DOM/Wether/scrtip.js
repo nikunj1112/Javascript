@@ -21,8 +21,7 @@ temp.textContent= data.main.temp;
 all.textContent = ` Pressure ; ${data.main.pressure} mm `;
 all1.textContent = `Humidity : ${data.main.humidity} % `;
 all2.textContent = `Wind : ${data.main.wind.speed} m/s `;
-all3.textContent = `Wind : ${data.main.wind.speed} m/s `;
-all2.textContent = `Wind : ${data.main.wind.speed} m/s `;
+
 
         })
 
