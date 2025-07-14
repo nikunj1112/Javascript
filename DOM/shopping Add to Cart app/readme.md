@@ -23,6 +23,10 @@ A clean and interactive plant shopping UI featuring:
 
 
 
+https://github.com/user-attachments/assets/d5b117a6-1521-4532-8ff6-282c36f6b634
+
+
+
 ---
 
 ## 📁 Folder Structure
