@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: "Gill Sans", sans-serif;
+        }
+
+        
+
+        .plantContainer {
+            position: relative;
+            width: 350px;
+            height: 450px;
+        }
+
+        .shape {
+            margin-top: 50px;
+            width: 100%;
+            height: 100%;
+            background-color: #f7f3e7;
+            border-radius: 165px 165px 0 0;
+            box-shadow: 10px 0px 30px rgba(0, 0, 0, 0.482);
+        }
+
+        .plantImage {
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 85%;
+            object-fit: contain;
+            filter: drop-shadow(0 -6mm 4mm rgba(0, 0, 0, 0.314));
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+
+
+        }
+
+        .plantImage:hover {
+            transform: translateX(-50%) scale(1.04);
+        }
+
+        .priceTag {
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+            background-color: #1b5738;
+            color: white;
+            padding: 13px 18px;
+            border-radius: 50%;
+            border: 1.5px solid white;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .priceTag::before {
+            content: "Price";
+            display: block;
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .img01:hover {
+            transform: translateX(-0%) scale(1.08);
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <!-- navbar -->
+    <div class="container-fluid  p-0" style="height: 90px; background-color: #0f3f25;  ">
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+
+                <div class="logo d-flex justify-content-between" style="width: 17%;">
+
+                    <img width="180" src="img/Plants Avenue.png">
+                </div>
+
+                <div class="collapse navbar-collapse text-light  " id="navbarNav">
+                    <ul class="navbar-nav w-100 fs-5 d-flex justify-content-center   ">
+                        <li class="nav-item pe-4 ">
+                            <a class="nav-link text-light " href="#">Home</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                            <a class="nav-link text-light" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                            <a class="nav-link text-light" href="#">About</a>
+                        </li>
+                        <li class="nav-item pe-5 ">
+                            <a class="nav-link text-light " href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="icon text-light  ">
+                    <i class="bi bi-heart-fill fs-6 pe-3"></i>
+                    <i class="bi bi-cart-check-fill fs-5 pe-3"></i>
+                    <i class="bi bi-person-fill fs-5 pe-5"></i>
+                </div>
+
+                <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvas-menu" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+
+                </button>
+
+                <!-- offcanvas -->
+                <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvas-menu">
+                    <div class="offcanvas-header pe-0 ps-1 pb-1 pt-1">
+
+                        <img style="width: 90%; height: 150px; border-radius: 20px;"
+                            class="offcanvas-title p-2  text-light" src="img/Plants Avenue.png">
+
+
+                        <button class="btn-close" data-bs-dismiss="offcanvas">
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body  ms-2 me-5 "
+                        style=" width: 88%; background-color: #0f3f25; border-radius: 10px;">
+                        <ul class="navbar-nav  w-100 d-flex justify-content-center text-center  ">
+                            <li class="nav-item ">
+                                <a class="nav-link text-light " href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light " href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="icon text-light text-center  ">
+                            <i class="bi bi-heart-fill pe-2"></i>
+                            <i class="bi bi-cart-check-fill pe-2"></i>
+                            <i class="bi bi-person-fill pe-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </nav>
+
+
+    </div>
+
+
+
+    <!-- banner -->
+
+    <div class="container-fluid" style="background-color: #0f3f25; height: 500px;">
+
+        <div class="container">
+            <div class="row ">
+                <div class="col-6 align-self-center ps-5">
+
+                    <h1 class="text-light "
+                        style="font-size: 45px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Bring The
+                        Nature <br> Close To You </h1>
+                    <p class="text-light" style="word-spacing: 2px; letter-spacing: 2px;">Enhance your space with our
+                        indoor and herb plants.<br> Experience the calming effect of greenery , right at home.</p>
+                    <button class="btn text-light rounded-pill  ps-3 pe-3 p-2"
+                        style=" outline:2px solid #dc6d39; background-color:#dc6d39;">Discover Now <i
+                            class="bi bi-arrow-right-circle-fill text-light "></i></button>
+
+                </div>
+                <div class="col-6 ">
+                    <div class="plantContainer m-auto">
+                        <div class="shape"></div>
+                        <img src="img/photo-1698659036245-35d318caeea5-removebg-preview.png" class="plantImage"
+                            alt="Rubber Plant" />
+                        <div class="priceTag">$8</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- our plant -->
+
+    <div class="container-fluid " style="background-color: 	#f7f3e7; height: 500px;">
+
+        <div class="container">
+            <div class="row d-flex justify-content-around" style="padding-top: 90px;">
+
+                <div class="col-5">
+                    <div class="row"
+                        style="height: 300px; overflow: hidden ; background-color:#d4d4d4af ; border-radius: 15px; ">
+                        <div class="col-6 p-0 ">
+                            <img class="img01" style="width: 72%; height: 90%; position: relative; left: 10%;  filter: drop-shadow(0 -6mm 4mm rgba(0, 0, 0, 0.11)); 
+                                         transition: transform 0.4s ease, box-shadow 0.3s ease; " src="img/pic1.png"
+                                alt="">
+                        </div>
+                        <div class="col-6  align-self-center  ">
+                            <h5 class="mb-0  pt-4" style="font-weight: bold; color: #1b5738;">Big Sale Products</h5>
+                            <h1 class=" pb-1 mb-0 ">Indoor <br> Plants</h1>
+                            <a style="font-size: 13px; color: #dc6d39; " href="plant1.html">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-5">
+                    <div class="row "
+                        style="height: 300px; overflow: hidden ; background-color:#d4d4d4af ; border-radius: 15px; ">
+                        <div class="col-6  align-self-center text-end ">
+                            <h5 class="mb-0  pt-3" style="font-weight: bold; color: #1b5738;">Top Products</h5>
+                            <h1 class=" pb-1 mb-0 ">Herbal <br> Plants</h1>
+                            <a style="font-size: 14px; color: #dc6d39; " href="plant2.html">SHOP NOW</a>
+                        </div>
+                        <div class="col-6  ">
+                            <img class="img01"
+                                style="width: 100%; height: 95%;  filter: drop-shadow(0 -6mm 4mm rgba(0, 0, 0, 0.178));  transition: transform 0.4s ease, box-shadow 0.3s ease;"
+                                src="img/saymom-leao-2sY0VM6MN3k-unsplash-Photoroom.png" ; alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- footer -->
+
+    <div class="container-fluid " style="background-color: #0f3f25; height: auto;">
+        <div class="container ">
+
+            <div class="row">
+
+                <div class="col-lg-6 col-sm-12">
+                    <p style="line-height: 60px; font-size: 15px; color: white;" class="mb-0">Copyright 2024 by Plants
+                        Avenue &copy; All Rights Reserved
+                    </p>
+                </div>
+
+
+                <div class="col-lg-6 col-sm-12">
+                    <ul class="navbar-nav text-end ">
+                        <li class="nav-item" style="line-height: 60px;">
+                            <a class="pe-3 text-light" href="#">Contact</a>
+                            <a class="text-light" href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid" style="height: 30px; background-color: #f7f3e7;">
+
+    </div>
+
+
+</body>
+
+</html>

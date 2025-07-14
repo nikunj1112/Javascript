@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: "Gill Sans", sans-serif;
+        }
+
+        .main {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 50px 0px 10px 0px;
+        }
+
+        .products {
+            width: 60%;
+            background-color: #1b5e1f;
+            padding: 50px;
+            padding-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+
+        }
+
+        .products h2,
+        .cart h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+            width: 100%;
+            color: white;
+        }
+
+
+
+
+        .plant-card {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            transition: transform 0.3s ease;
+            font-family: Arial, sans-serif;
+            flex: 0 1 calc(50% - 20px);
+
+        }
+
+        .plant-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .plant-content {
+            display: flex;
+            gap: 0px;
+
+        }
+
+        .plant-card img {
+            width: 40%;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .information {
+
+            flex: 1;
+            text-align: start;
+            padding-left: 10px;
+
+        }
+
+        .information h3 {
+            font-size: 20px;
+            margin: 12px 0 8px;
+            color: #2e7d32;
+        }
+
+        .information p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 12px;
+            min-height: 40px;
+        }
+
+        .information h2 {
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 12px;
+        }
+
+        .information button {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .plant-card:hover {
+            transform: translateY(-5px);
+        }
+
+
+        /* cart css */
+
+        .cart {
+
+            background-color: #1E5128;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            width: 27%;
+            height: auto;
+            font-family: Arial, sans-serif;
+
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            background-color: #eaf7ea;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+            object-fit: scale-down;
+        }
+
+        .item-details {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .item-actions button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 3px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .totals {
+            margin-top: 20px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .totals p {
+            display: flex;
+            justify-content: space-between;
+            margin: 6px 0;
+        }
+
+        .cart-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+        }
+
+        .cart-buttons .clear {
+            background-color: #e84331;
+            color: white;
+            padding: 0px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .cart-buttons .checkout {
+            background-color: #eaf7ea;
+            color: #2f2f2f;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .hero-banner {
+            background-color: #eaf7ea;
+            padding: 30px 20px 10px 20px;
+            text-align: center;
+            margin-top: 0px;
+        }
+
+        .hero-banner h1 {
+            font-size: 32px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: #0f3f25;
+            margin-bottom: 10px;
+        }
+
+        .hero-banner p {
+            font-size: 18px;
+            color: #4b5d4b;
+            margin-bottom: 0px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .btn {
+            display: flex;
+            align-items: end;
+            background-color: #0f3f25;
+            border-radius: 50%;
+            width: 40px;
+            padding: 6px 10px;
+            color: white;
+        }
+
+        .btn:hover {
+            color: black;
+            background-color: #1e512882;
+        }
+
+
+
+
+        /* cart data imag hover  */
+
+        .image-wrapper {
+            position: relative;
+            width: 150px;
+            height: 200px;
+        }
+
+        .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: opacity 0.6s ease;
+        }
+
+        .img-hover {
+            opacity: 0;
+            /* hide img for index[1] */
+        }
+
+        .image-wrapper:hover .img-hover {
+            opacity: 1;
+            /* div hover to show img for index[1] */
+
+        }
+
+        .image-wrapper:hover .img-default {
+            opacity: 0;
+            /* hide img for index[0] */
+        }
+
+
+        .item-actions button {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0F3C1E;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background .2s ease;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+
+
+    <!-- our Products -->
+
+    <div class="hero-banner">
+        <a class="btn  bd-light fs-6 " href="plant.html">⬅ </a>
+        <h1>Welcome to Plants Avenue 🍀</h1>
+        <p>Your destination for beautiful indoor plants & eco-friendly décor.</p>
+    </div>
+
+
+    <div style="background-color: #eaf7ea; height: auto;" class="main">
+
+
+        <!-- product -->
+        <div class="products " id="prod">
+            <h2>🛍️ shopping Product</h2>
+
+
+
+        </div>
+
+        <!-- cart -->
+        <div class="cart" id="cart">
+            <h2> 🛒 Cart</h2>
+
+
+
+
+        </div>
+
+
+            <!-- footer -->
+
+            <div class="container-fluid  mt-2 mb-5" style="background-color: #0f3f25;padding: 0px; height: auto;">
+                <div class="container">
+        
+                    <div class="row">
+        
+                        <div class="col-lg-6 col-sm-12">
+                            <p style="line-height: 60px; font-size: 15px; color: white;" class="mb-0">Copyright 2024 by Plants
+                                Avenue &copy; All Rights Reserved
+                            </p>
+                        </div>
+        
+        
+                        <div class="col-lg-6 col-sm-12">
+                            <ul class="navbar-nav text-end ">
+                                <li class="nav-item" style="line-height: 60px;">
+                                    <a class="pe-3 text-light" href="#">Contact</a>
+                                    <a class="text-light" href="#">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+        
+        
+        
+        
+                </div>
+            </div>
+        
+          
+
+    </div>
+
+    
+    
+
+    <script src="plant1.js"> </script>
+
+</body>
+
+</body>
+
+</html>
