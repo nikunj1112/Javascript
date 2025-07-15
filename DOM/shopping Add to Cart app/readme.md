@@ -106,6 +106,6 @@ const products = [
 
 MIT License – Feel free to use, modify, and share with proper credit. 😊
 
----
+----
 
 🌱 **Happy Coding & Growing!**
