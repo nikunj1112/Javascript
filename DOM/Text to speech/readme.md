@@ -52,6 +52,10 @@ A stylish and interactive **Text-to-Speech (TTS)** web app using JavaScript’s 
 
 
 
+https://github.com/user-attachments/assets/fd5d9c45-bc86-4fe4-9ef7-8db7e2fbadaf
+
+
+
 ---
 
 ## 🛠 Technologies Used
