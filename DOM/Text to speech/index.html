@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #eee2dc, #edc7b7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: #eee2dc;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            width: 33%;
+            text-align: center;
+            border: 2px solid #edc7b7;
+        }
+
+        h1 {
+            font-size: 30px; 
+            color: #123c69; 
+            margin-bottom: 25px;
+        }
+
+        .mic {
+            margin-bottom: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .mic img {
+            filter: drop-shadow(0 0 6px #123c6985);
+            background-color: #ac3b61;
+            padding: 18px;
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+
+        }
+
+        .mic:hover {
+            transform: scale(1.1);
+        }
+
+        .mic p {
+            margin-top: 8px;
+            font-weight: 500;
+            color: #ac3b61;
+        }
+
+        textarea {
+            width: 100%;
+            height: 140px;
+            padding: 15px;
+            border-radius: 12px;
+            border: 2px solid #bab2b5;
+            background: #fff;
+            font-size: 16px;
+            color: #123c69;
+            resize: none;
+            transition: 0.3s ease;
+            outline: none;
+        }
+
+        textarea:focus {
+            border-color: #ac3b61;
+            box-shadow: 0 0 6px #ac3b61;
+        }
+
+        .btns {
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btns button {
+            background: #ac3b61;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(172, 59, 97, 0.3);
+        }
+
+        .btns button:hover {
+            background: #123c69;
+            transform: translateY(-2px);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🔊 Text To Speech</h1>
+
+        <div class="mic">
+            <img src="https://img.icons8.com/ios-filled/100/ffffff/microphone.png" alt="Mic Icon" />
+            <p>Tap To Speak</p>
+        </div>
+
+        <textarea placeholder="💬 Type something amazing here..." id="textArea"></textarea>
+
+        <div class="btns">
+            <button id="pauseBtn">⏸ Pause</button>
+            <button id="resumeBtn">▶️ Resume</button>
+            <button id="clearBtn">🛑 Stop & Clear</button>
+            <button id="languageToggleBtn">📢 Speak in Gujarati</button>
+            <!-- <button id="GujaratiBtn">📢 Gujarati માં બોલાવો</button> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
